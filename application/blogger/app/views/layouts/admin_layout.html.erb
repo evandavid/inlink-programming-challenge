@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blogger</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <%= render 'shared/top_nav' %>
+            <%= render 'shared/navbar' %>
+        </nav>
+        <!-- End navigation -->
+
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <%= render 'layouts/message' %>
+                    <%= yield %>
+                </div>
+            </div>
+        </div>
+         <!-- End Page content -->
+    </div>
+</body>
+</html>

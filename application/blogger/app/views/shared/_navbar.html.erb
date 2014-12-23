@@ -1,0 +1,34 @@
+<div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav navbar-collapse">
+        <ul class="nav" id="side-menu">
+            <li class="<%= active_for('posts') %>">
+                <a href="#"><i class="fa fa-edit fa-fw"></i> Posts<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="/admin/posts/new" class="<%= active_for('posts', 'new')%>">Write Post</a>
+                    </li>
+                    <li>
+                        <a href="/admin/posts" class="<%= active_for('posts', 'index')%>">List Posts</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li class="<%= active_for('categories') %>">
+                <a href="#"><i class="fa fa-tags fa-fw"></i> Categories<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="/admin/categories/new" class="<%= active_for('categories', 'new')%>">Add Category</a>
+                    </li>
+                    <li>
+                        <a href="/admin/categories" class="<%= active_for('categories', 'index')%>">List Categories</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="/"><i class="fa fa-arrow-circle-right fa-fw"></i> Back to site</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /.sidebar-collapse -->
+</div>
+<!-- /.navbar-static-side -->

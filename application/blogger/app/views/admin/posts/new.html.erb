@@ -1,0 +1,13 @@
+<div class="col-lg-12">
+    <h1 class="page-header"><%= action_name.capitalize %> Post</h1>
+    <div class="right search_form2">
+      <div class="form-group input-group">
+        <form method="POST" action="/preview" target="_blank" id="preview_form">
+          <input type="hidden" name="title" id="title_prev">
+          <input type="hidden" name="content" id="content_prev">
+          <button class="btn btn-primary" id="preview">Preview</button>
+        </form>
+      </div>
+    </div>
+    <%= render 'form' %>
+</div>

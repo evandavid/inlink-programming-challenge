@@ -1,0 +1,17 @@
+<div class="col-lg-12">
+    <h1 class="page-header">
+      <%=@post.title%>
+
+      <p class="lead">
+        By <a href="#"><%= @post.try(:user).try(:email)%></a>
+      </p>
+      <!-- Date/Time -->
+      <p class="lead-sub">
+        <i class="fa fa-calendar"></i> 
+        Posted on <%= @post.created_at.strftime("%B %d at %I:%M %p")%>
+      </p>
+      </h1>
+
+    <p><%=raw @post.content%></p>
+      <!-- /.table-responsive -->
+</div>

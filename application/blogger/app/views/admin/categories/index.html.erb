@@ -1,0 +1,39 @@
+<div class="col-lg-12">
+    <h1 class="page-header">List Categories</h1>
+    <div class="right search_form">
+      <div class="form-group input-group">
+        <form method="GET">
+          <input type="text" style="width:200px" class="form-control" name="q" placeholder="filters" value="<%= params['q']%>" autofocus>
+          <span class="input-group-btn">
+              <button type="submit" class="btn btn-default"><i class="fa fa-search"></i>
+              </button>
+          </span>
+        </form>
+      </div>
+    </div>
+    
+    <div class="table-responsive">
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th>#</th>
+                      <th width="70%">Name</th>
+                      <th>Action</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <% @categories.each_with_index do |category, index|%>
+                  <tr>
+                      <td><%= index + 1%></td>
+                      <td><%= category.name%></td>
+                      <td>
+                        <%= link_to 'Edit', edit_admin_category_path(category)%> | 
+                        <%= link_to 'Delete', admin_category_path(category), data: { confirm: 'Are you sure?' }, method: :delete%>
+                      </td>
+                  </tr>
+                <% end unless @categories.blank?%>
+              </tbody>
+          </table>
+      </div>
+      <!-- /.table-responsive -->
+</div>
