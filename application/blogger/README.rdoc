@@ -6,5 +6,7 @@ This is example blogger application which implement:
 * List, Filter and Preview post
 
 You can view the {live version}[http://blogger.davidkristian.me] of blogger application 
+
 email: admin@example.com
+
 pass : password
